@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS</title>
+    <script src="js/vue.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div id="app">
+
+    	<button v-on:click="count++" >Increment</button>
+
+    	<span v-on:mousemove="resetCount" >{{ count }}</span>
+
+    	<button v-on:click="count--" >Decrement</button>
+
+    	<br>
+
+    	<input type="text" v-on:keyup.enter="updateCount"  />
+    </div>
+
+
+    <script type="text/javascript">
+    new Vue({
+    	el : '#app',
+    	data : {
+    		count : 0
+    	},
+    	methods:{
+    		resetCount : function(){
+    			this.count = 0;
+    		},
+    		updateCount : function(event){
+    			this.count = event.currentTarget.value;
+    		}
+    	}
+    });
+    </script>
+
+  </body>
+</html>

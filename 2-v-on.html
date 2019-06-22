@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS</title>
+    <script src="js/vue.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div id="app">
+      <button @click='count++'>+</button>
+      <button @click='count--'>-</button>
+      <button @click='count_2++'>2+</button>
+
+      <p>{{ count }} | {{ count_2 }}</p>
+      <p>{{ output }}</p>
+    </div>
+
+
+    <script type="text/javascript">
+      new Vue({
+      	el : '#app',
+      	data : {
+      		count : 0,
+          count_2 : 0
+      	},
+        watch : {
+          count : function (value) {
+            var vm = this;
+            setTimeout(function() {
+              vm.count = 0;
+            },2000);
+          }
+        },
+        computed : {
+          output : function() {
+            return this.count >= this.count_2 ? '1 is Greater' : '2 is Greater';
+          }
+        }
+      });
+    </script>
+
+  </body>
+</html>

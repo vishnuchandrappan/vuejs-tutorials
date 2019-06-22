@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS</title>
+    <script src="js/vue.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div id="app">
+      <p v-if="show">Hello World</p>
+      <p v-else>Lorem Ipsum</p>
+      <hr>
+      <button @click="show = !show">Toggle</button>
+    <hr>
+      <ul>
+        <li v-for="todo in todos">{{ todo }}</li>
+      </ul>
+
+      <hr>
+
+      <ol>
+        <li v-for="(detail,i) in details">{{ detail.name }} ({{ detail.age }})</li>
+      </ol>
+    </div>
+
+
+    <script type="text/javascript">
+      new Vue({
+      	el : '#app',
+        data : {
+          show : false,
+          todos : ['a','b','c'],
+          details : [
+            { name: "Vishnu", age: 21},
+            { name: "Laura", age: 22},
+            { name: "John Doe", age: 23}
+          ],
+        }
+      });
+    </script>
+
+  </body>
+</html>

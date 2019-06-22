@@ -1,0 +1,65 @@
+.master{
+  display: flex;
+  justify-content: space-around;
+}
+.btn{
+  padding: 5px;
+  border-radius: 3px;
+  background-color: tomato;
+  border: none;
+  transition: .4s;
+  color: black;
+  text-transform: uppercase;
+}
+.menu-list,.log{
+  display: flex;
+  padding: 20px;
+  border: solid 2px gray;
+  border-radius: 5px;
+  margin: 10px 0px 60px 0px;
+  box-shadow:0px 0px 50px 50px silver ;
+}
+.healthBar{
+  background: silver;
+  width: 300px;
+  margin: 30px 0px 30px 0px;
+  border-radius: 3px;
+  transition: 0.4s;
+  text-align: center;
+}
+.btn:hover{
+  transform: scale(1.1);
+}
+h2{
+  text-align: center;
+}
+input{
+  color: black;
+}
+ul{
+  width: 100%;
+}
+li{
+  background: gray;
+  list-style-type: none;
+  text-align: center;
+  margin: 5px;
+}
+.player{
+  background-color: tomato;
+  margin-right:70px;
+  border-radius: 30px 30px 30px 0px;
+  padding:10px;
+}
+.monster{
+  background-color: cyan;
+  margin-left:70px;
+  border-radius: 30px 30px 0px 30px;
+  padding:10px;
+}
+.green{
+  background-color: green;
+}
+.yellow{
+  background-color: yellow;
+}
