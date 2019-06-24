@@ -47,7 +47,8 @@ new Vue({
   },
   watch : {
     playerHealth : function () {
-      if (this.playerHealth <= 0) {
+
+      if (this.playerHealth <= 0 /home/v15hnu/vue-js/js/master-1.js) {
         alert('You Lost !');
         this.gameStarted = false;
       }
@@ -55,8 +56,9 @@ new Vue({
         this.playerHealth = 100;
       }
     },
-    monsterHealth : function () {
-      if (this.monsterHealth <= 0) {
+      monsterHealth : function () {
+
+      if (this.monsterHealth <= 0 /home/v15hnu/vue-js/js/master-1.js) {
         alert('You Won !');
         this.gameStarted = false;
       }
