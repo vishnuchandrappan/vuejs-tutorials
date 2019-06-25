@@ -1,22 +1,23 @@
 <template lang="html">
   <div class="">
-    Server Status : {{ status }}
+    Increment : {{ count }}
     <hr>
-    <button type="button" @click="changeStatus" name="button">Change !</button>
+    <button type="button" @click="count++" name="button">+</button>
+    <hr>
+    <home-ss></home-ss>
   </div>
 </template>
 
 <script>
+    import Home from './Home.vue'
     export default {
         data : function () {
            return {
-              status : 'Critical'
+              count : 0
            }
         },
-        methods : {
-            changeStatus() {
-                this.status = 'Normal';
-            }
+        components : {
+          'home-ss' : Home
         }
     }
 </script>

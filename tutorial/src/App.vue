@@ -1,18 +1,10 @@
 <template>
-  <div class="">
-    <app-ss></app-ss>
-    <app-ss></app-ss>
-  </div>
+    <div class="">
+      <double-ss></double-ss>
+    </div>
 </template>
 
 <script>
-  export default {
-    data : function () {
-      return {
-        status : "Critical"
-      }
-    }
-  }
 </script>
 
 <style>

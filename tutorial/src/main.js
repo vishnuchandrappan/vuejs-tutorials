@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Home from './Home.vue'
+import Double from './Double.vue'
 
-Vue.component('app-ss',Home);
+
+Vue.component('double-ss',Double);
+
 
 new Vue({
   el : '#app',

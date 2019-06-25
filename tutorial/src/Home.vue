@@ -1,22 +1,20 @@
-<template lang="html">
+ <template lang="html">
+   <div class="">
+     Decrement : {{ count }}
+     <hr>
+     <button type="button" @click="count--" name="button">-</button>
+   </div>
+ </template>
 
-  <div class="">
-    <app-ss></app-ss>
-  </div>
+ <script>
+     export default {
+         data : function () {
+            return {
+               count : 0
+            }
+         }
+     }
+ </script>
 
-</template>
-
-<script>
-    import ServerStatus from './ServerStatus.vue';
-
-    export default {
-
-        components : {
-          'app-ss' : ServerStatus
-        }
-
-    }
-</script>
-
-<style lang="css" scoped>
-</style>
+ <style lang="css" scoped>
+ </style>
