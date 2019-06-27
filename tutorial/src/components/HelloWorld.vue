@@ -1,6 +1,6 @@
 <template lang="html">
     <div class="container">
-        <h1>User Details | {{ name.name }} ( {{ age }} )</h1> <hr>
+        <h1 @click="resetName">User Details | {{ name.name }} ( {{ age }} )</h1> <hr>
         <div class="row justify-content-around">
             <app-user class="col-sm-6" @ageChanged="age = $event" :name="name" :age="age"></app-user>
             <app-edit-user class="col-sm-6" :name="name"></app-edit-user>
@@ -26,11 +26,12 @@
             'app-user' : User,
             'app-edit-user' : Edit
         },
-        // methods: {
-        //     changeName() {
-        //         this.name = 'John Smith'
-        //     }
-        // }
+        methods: {
+            resetName() {
+                this.name.name = 'John Doe',
+                this.age = 21
+            }
+        }
     }
 </script>
 

@@ -2,8 +2,9 @@
     <div class="row justify-content-around">
         <p class="col-sm-6">Name : {{ name.name }}</p>
         <p class="col-sm-6">Lorem ipsum dolor sit amet</p>
+        <p>Job : {{ job }}</p>
         <p>Age : {{ age }}</p>
-        <button type="button" @click="changeAge" name="button">Change Age</button>
+        <button type="button" class="btn btn-success" @click="changeAge" name="button">Change Age</button>
     </div>
 </template>
 
@@ -15,6 +16,11 @@ export default {
             this.age ++;
             this.$emit('ageChanged', this.age);
         },
+    },
+    data : function() {
+        return {
+            job : 'Developer'
+        }
     }
 }
 </script>
