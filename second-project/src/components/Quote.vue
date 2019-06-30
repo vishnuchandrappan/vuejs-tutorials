@@ -19,11 +19,11 @@
 <style lang="css" scoped>
     .panel-body{
         text-align: center;
-        padding:20px;
+        padding:5px;
         border: solid 2px;
-        margin: 5px;
+        margin: 2px;
         border-radius: 5px;
-        font-size: 24px;
+        font-size: 18px;
         transition: 0.4s;
     }
     .quote{

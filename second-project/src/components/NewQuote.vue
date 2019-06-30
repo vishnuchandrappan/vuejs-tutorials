@@ -20,8 +20,13 @@
         },
         methods: {
             createNew() {
-                this.$emit('quoteAdded',this.quote);
-                this.quote = "";
+                if (this.quote.length != 0) {
+                    this.$emit('quoteAdded',this.quote);
+                    this.quote = "";
+                }
+                else {
+                    alert('Empty Quote Content');
+                }
             }
         }
     }
